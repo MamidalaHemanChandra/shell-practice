@@ -3,7 +3,7 @@
 P=1
 Q=2
 R=3
-S=4
+S=Heman
 SUM=$(($P+$Q+$R+$S))
 echo "sum is : $SUM"
 
