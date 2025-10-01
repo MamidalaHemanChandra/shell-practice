@@ -7,3 +7,4 @@ echo "current directory: $PWD"
 echo "User is : $USER" 
 echo "Home : $HOME"
 echo "PID is : $$"
+sleep 10 &
