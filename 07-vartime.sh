@@ -1,7 +1,7 @@
 #!/bin/bash
 
 START=$(date +%s)
-echo "Heman"
+sleep 10 
 END=$(date +%s)
 
  TOTAL=$({END}-${START})
