@@ -3,7 +3,8 @@
 P=1
 Q=2
 R=3
-SUM=$(($P+$Q+$R))
+S=4
+SUM=$(($P+$Q+$R+$S))
 echo "sum is : $SUM"
 
 
