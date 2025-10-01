@@ -1,9 +1,11 @@
 #!/bin/bash
 
 START=$(date +%s)
-sleep 10 
+
+echo "heman"
+
 END=$(date +%s)
 
- TOTAL=$(${END}-${START})
+TOTAL=($START-$END)
 
  echo "Total time taken to compelete the Heman script = $TOTAL sec"
