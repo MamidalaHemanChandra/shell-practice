@@ -6,6 +6,6 @@ echo "heman"
 
 END=$(date +%s)
 
-TOTAL=($START-$END)
+TOTAL=(($START-$END))
 
  echo "Total time taken to compelete the Heman script = $TOTAL sec"
