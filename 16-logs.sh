@@ -57,5 +57,5 @@ then
     dnf install python3 -y &&>>$LOGS_FILE
     validate $? "Python3"
 else
-    echo -e "$Y Already Installed skip $N" | tee -a <<LOGS_FILE
+    echo -e "$Y Already Installed skip $N" | tee -a $LOGS_FILE
 fi
