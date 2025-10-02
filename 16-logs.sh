@@ -39,7 +39,7 @@ then
     dnf install mysql -y &&>>$LOGS_FILE
     validate $? "MySql"
 else
-    echo -e "$Y Already Installed skip $N" tee -a $LOGS_FILE
+    echo -e "$Y Already Installed skip $N" | tee -a $LOGS_FILE
 fi
 
 dnf list installed nginx &&>>$LOGS_FILE
