@@ -11,7 +11,7 @@ LOGS_FOLIDER="/var/log/shell-practice"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOGS_FILE="$LOGS_FOLIDER/$SCRIPT_NAME.log" #/var/log/shell-practice/16-logs.log
 
-mkdir -p $LOGS_FOLIDER &&>>$LOGS_FILE
+mkdir -p $LOGS_FOLIDER 
 
 echo "Script Started time :  $(date)" | tee -a $LOGS_FILE
 
@@ -33,28 +33,28 @@ else
 fi
 }
 
-dnf list installed mysql &&>>$LOGS_FILE
+dnf list installed mysql &>>$LOGS_FILE
 if [ $? -ne 0 ] #0 1
 then
-    dnf install mysql -y &&>>$LOGS_FILE
+    dnf install mysql -y &>>$LOGS_FILE
     validate $? "MySql"
 else
     echo -e "$Y Already Installed skip $N" | tee -a $LOGS_FILE
 fi
 
-dnf list installed nginx &&>>$LOGS_FILE
+dnf list installed nginx &>>$LOGS_FILE
 if [ $? -ne 0 ]
 then 
-    dnf install nginx -y &&>>$LOGS_FILE
+    dnf install nginx -y &>>$LOGS_FILE
     validate $? "Nginx"
 else 
     echo -e "$Y Already Installed skip $N" | tee -a $LOGS_FILE
 fi
 
-dnf list installed python3 &&>>$LOGS_FILE
+dnf list installed python3 &>>$LOGS_FILE
 if [ $? -ne 0 ]
 then
-    dnf install python3 -y &&>>$LOGS_FILE
+    dnf install python3 -y &>>$LOGS_FILE
     validate $? "Python3"
 else
     echo -e "$Y Already Installed skip $N" | tee -a $LOGS_FILE
