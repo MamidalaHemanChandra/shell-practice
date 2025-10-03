@@ -15,7 +15,7 @@ SCRIPT=$( echo $0 | cut -d "." -f1)
 FILE="$FOLDER/$SCRIPT.log"
 
 mkdir -p $FOLDER
-echo "$G Script Started at $(date)" | tee -a $FILE
+echo -e "$G Script Started at $(date)" | tee -a $FILE
 
 
 
