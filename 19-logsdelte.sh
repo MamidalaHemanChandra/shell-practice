@@ -23,7 +23,7 @@ then
     exit 1
 fi
 
-Souce_Dir="/home/ec-user/app-logs"
+Souce_Dir="/home/ec-user/heman"
 
 if [ ! -d $Souce_Dir ];then
     echo "Error :: $Souce_Dir doen't exist "
