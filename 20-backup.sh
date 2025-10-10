@@ -28,11 +28,11 @@ then
 fi
 
 Usage(){
-    echo "Arg passed are Source:$Source Destination:$Destination Days [Deafult is 14,Opational]"
+    echo "Arg passed are Source:$Source Destination:$Destination Days:[Deafult is 14,Opational]"
     exit 1
 }
 
-if [ $# -le 2 ];then
+if [ $# -lt 2 ];then
     Usage
 fi
 
