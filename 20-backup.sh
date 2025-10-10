@@ -67,7 +67,7 @@ else
     while IFS= read -r line
     do
         rm -rf 
-        echo ""
+        echo "Deleted log files"
     done <<< $Log_files
 
 fi
