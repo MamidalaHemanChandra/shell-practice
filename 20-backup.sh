@@ -15,7 +15,7 @@ SCRIPT=$( echo $0 | cut -d "." -f1)
 FILE="$FOLDER/$SCRIPT.log"
 
 mkdir -p $FOLDER
-echo -e "$G Script Started at $(date)" | tee -a $FILE
+echo -e "$G Script Started at $(date) $N" | tee -a $FILE
 
 if [ $USERID -ne 0 ]
 then
@@ -67,6 +67,7 @@ else
     while IFS= read -r line
     do
         rm -rf 
+        echo ""
     done <<< $Log_files
 
 fi
