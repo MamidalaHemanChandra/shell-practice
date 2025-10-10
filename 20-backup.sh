@@ -53,7 +53,7 @@ if [ -z "$Log_files" ];then
     echo "Log files are empty"
 else
     echo "Log files found : $Log_files"
-    TimeStamp=$(date +%F,%H:%M:%s)
+    TimeStamp=$(date +%F,%H:%M:%S)
     Archieve="$Destination/app-logs-$TimeStamp.zip"
     echo "Archieve file is : $Archieve"
     find $Source -name "*.log" -type f -mtime +$Days | zip -@ -j $Archieve
