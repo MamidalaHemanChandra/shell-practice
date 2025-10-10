@@ -11,7 +11,7 @@ N="\e[0m"
 
 #/var/log/script/log.log
 LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
+SCRIPT=$( echo $0 | cut -d "." -f1)
 LOGS_FILE="$FOLDER/$SCRIPT.log"
 
 mkdir -p $FOLDER
