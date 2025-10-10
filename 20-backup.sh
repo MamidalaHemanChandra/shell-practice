@@ -45,7 +45,7 @@ if [ ! $Destination ];then
     exit 1
 fi
 
-Log_files=$(find $Source -name ".log" -type f -mtime +14)
+Log_files=$(find $Source -name "*.log" -type f -mtime +14)
 
 if [ -z $Log_files ];then
     "Log files are empty"
