@@ -10,12 +10,12 @@ Y="\e[33m"
 N="\e[0m"
 
 #/var/log/script/log.log
-LOGS_FOLDER="/var/log/shell-script"
+FOLDER="/var/log/script"
 SCRIPT=$( echo $0 | cut -d "." -f1)
-LOGS_FILE="$FOLDER/$SCRIPT.log"
+FILE="$FOLDER/$SCRIPT.log"
 
 mkdir -p $FOLDER
-echo -e "$G Script Started at $(date) $N" | tee -a $FILE
+echo -e "$G Script Started at $(date)" | tee -a $FILE
 
 if [ $USERID -ne 0 ]
 then
