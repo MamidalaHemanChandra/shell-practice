@@ -64,7 +64,7 @@ else
         echo "$Archieve Files created"
         while IFS= read -r line
         do
-        rm -rf 
+        rm -rf $line
         echo "Deleted log files: $line"
         done <<< $Log_files
     fi
