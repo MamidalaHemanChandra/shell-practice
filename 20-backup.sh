@@ -66,7 +66,6 @@ else
     while IFS= read -r line
     do
         rm -rf 
-    done << $Log_files
+    done <<< $Log_files
 
 fi
-
