@@ -53,7 +53,7 @@ if [ -z $Log_files ];then
 else
     "Log files found : $Log_files"
     TimeStamp=$(date +%F,%H:%M:%s)
-    Archieve="$Destination:$TimeStamp.zip"
+    Archieve="$Destination/app:$TimeStamp.zip"
     echo "Archieve file is : $Archieve"
     find $Source -name "*.log" -type f -mtime +14 | zip -@ -j $Archieve
 
