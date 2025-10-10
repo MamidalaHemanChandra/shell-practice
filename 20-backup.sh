@@ -29,7 +29,7 @@ Destination=$2
 Days=${3:-14}
 
 Usage(){
-    echo "Arg passed are Source:$Source Destination:$Destination Days:$Days [Deafult is 14,Opational]"
+    echo "Arg passed are Source:$Source Destination:$Destination Days [Deafult is 14,Opational]"
     exit 1
 }
 
