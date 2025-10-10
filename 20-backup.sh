@@ -9,6 +9,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+Source=$1
+Destination=$2
+Days=${3:-14}
+
 #/var/log/script/log.log
 FOLDER="/var/log/script"
 SCRIPT=$( echo $0 | cut -d "." -f1)
@@ -22,11 +26,6 @@ then
     echo -e "$R Take Root Access $N (Use Sudo)" 
     exit 1
 fi
-
-
-Source=$1
-Destination=$2
-Days=${3:-14}
 
 Usage(){
     echo "Arg passed are Source:$Source Destination:$Destination Days [Deafult is 14,Opational]"
