@@ -49,7 +49,7 @@ fi
 Log_files=$(find $Source -name "*.log" -type f -mtime +$Days)
 
 
-if [ -z $Log_files ];then
+if [ -z "$Log_files" ];then
     echo "Log files are empty"
 else
     echo "Log files found : $Log_files"
