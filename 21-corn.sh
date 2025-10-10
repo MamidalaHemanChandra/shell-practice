@@ -56,6 +56,7 @@ else
     TimeStamp=$(date +%F,%H:%M:%S)
     Archieve="$Destination/app-logs-$TimeStamp.zip"
     echo "Archieve file is : $Archieve"
+    dnf install zip -y
     find $Source -name "*.log" -type f -mtime +$Days | zip -@ -j $Archieve
     
     if [ ! -f $Archieve ];then
