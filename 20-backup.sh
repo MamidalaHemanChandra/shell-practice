@@ -57,17 +57,18 @@ else
     echo "Archieve file is : $Archieve"
     find $Source -name "*.log" -type f -mtime +14 | zip -@ -j $Archieve
 
-    if [ ! $Archieve ];then
+    if [ ! -f $Archieve ];then
         echo "Archieve Files not created"
         exit 1
     else
         echo "$Archieve Files created"
-    fi
-
-    while IFS= read -r line
-    do
+        while IFS= read -r line
+        do
         rm -rf 
         echo "Deleted log files: $line"
-    done <<< $Log_files
+        done <<< $Log_files
+    fi
+
+    
 
 fi
