@@ -48,10 +48,10 @@ fi
 Log_files=$(find $Source -name "*.log" -type f -mtime +14)
 
 if [ -z $Log_files ];then
-    "Log files are empty"
+    echo "Log files are empty"
     exit 1
 else
-    "Log files found : $Log_files"
+    echo "Log files found : $Log_files"
     TimeStamp=$(date +%F,%H:%M:%s)
     Archieve="$Destination/app:$TimeStamp.zip"
     echo "Archieve file is : $Archieve"
