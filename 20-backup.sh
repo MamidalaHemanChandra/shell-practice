@@ -53,7 +53,8 @@ if [ -z $Log_files ];then
 else
     "Log files found : $Log_files"
     TimeStamp=$(date +%F,%H:%M:%s)
-    Archieve="$Destination-$TimeStamp.zip"
+    Archieve="$Destination:$TimeStamp.zip"
+    echo "Archieve file is : $Archieve"
     $Log_files | zip -@ -j $Archieve
 
     if [ ! $Archieve ];then
