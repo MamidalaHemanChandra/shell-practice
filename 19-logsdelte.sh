@@ -35,7 +35,7 @@ Log_fileto_Delete=$(find $Souce_Dir -name "*.log" -type f -mtime +14)
 while IFS= read -r line
 do 
     echo "Found log files: $line "
-    rm -rf $line
+    rm -r $line
     echo "Deleted log file is : $line"
 
 done < $Log_fileto_Delete
