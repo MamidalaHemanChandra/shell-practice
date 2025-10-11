@@ -14,7 +14,7 @@ do
     fi
 done <<< $Dish_Usage
 
-if [ -n $Alert ];then
+if [ -n "$Alert" ];then
     {
     echo "To: cryptochandra77@gmail.com"
     echo "Subject: $Subject"
@@ -22,5 +22,4 @@ if [ -n $Alert ];then
     echo ""
     echo "$Alert"
     } | msmtp "cryptochandra77@gmail.com"
-        
 fi
