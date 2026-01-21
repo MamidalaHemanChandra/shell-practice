@@ -8,7 +8,7 @@ Sum=$(($Number1 + $Number2 + $Number))
 echo "Sum is: $Sum"
 
 Heros=("Mahesh" "NTR" "Prabas" "Nani")
-echo "TFI Heros are: $@"
+echo "TFI Heros are: $*"
 echo "First Hero is: ${Heros[0]}"
 echo "Third Hero is: ${Heros[2]}"
 echo "Seventh Hero is: ${Heros[7]}"
