@@ -9,7 +9,7 @@ echo "Sum is: $Sum"
 
 Heros=("Mahesh" "NTR" "Prabas" "Nani")
 echo "TFI Heros are: $@"
-echo "First Hero is: $Heros[0]"
-echo "Third Hero is: $Heros[2]"
-echo "Seventh Hero is: $Heros[7]"
+echo "First Hero is: ${Heros[0]}"
+echo "Third Hero is: ${Heros[2]}"
+echo "Seventh Hero is: ${Heros[7]}"
 
