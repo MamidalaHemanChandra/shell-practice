@@ -4,7 +4,7 @@ Number1=100
 Number2=200
 Number=Heman
 
-Sum=(($Number1+$Number2+$Number))
+Sum=$(($Number1 + $Number2 + $Number))
 echo "Sum is: $Sum"
 
 Heros=("Mahesh" "NTR" "Prabas" "Nani")
