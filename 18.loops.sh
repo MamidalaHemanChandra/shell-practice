@@ -10,13 +10,14 @@ mkdir -p $Logs_Folder
 Script_Name=$(echo $0 | cut -d "." -f1)
 Logs="$Logs_Folder/$Script_Name.log"
 
-echo -e "$G Script Started executed at : $(date) $N"  | tee -a $Logs
-
 USERID=$(id -u)
 if [ $USERID -ne 0 ];then
     echo -e "$R Error:: Take the Root Access $N" | tee -a $Logs
     exit 1
 fi
+
+
+echo -e "$G Script Started executed at : $(date) $N"  | tee -a $Logs
 
 VALIDATE() {
     if [ $1 -ne 0 ];then
@@ -36,5 +37,4 @@ do
     else
         echo -e "$Y $package Already Installed ... SKIPPING $N" | tee -a $Logs
     fi
-
 done
