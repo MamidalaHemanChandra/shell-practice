@@ -43,7 +43,7 @@ fi
 
 Log_files=$( find $Source_Dir -name "*.log" -type f -mtime +$Days )
 
-if [ ! -z $Log_files ];then
+if [ ! -z "$Log_files" ];then
     echo "Files found to Archieve: $Log_files"
     Timestamp=$(date +%F-%H-%M)
     Zip_file_name="$Destination_Dir/chandra:$Timestamp.zip"
