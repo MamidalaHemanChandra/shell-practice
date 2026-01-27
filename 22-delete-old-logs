@@ -23,7 +23,7 @@ if [ ! -d $Source_dir ];then
     exit 1
 fi
 
-Log_files=$( find $Source_dir -name "*.log" type -f -mtime +14 )
+Log_files=$( find $Source_dir -name "*.log" -type -f -mtime +14 )
 
 while IFS= read -r file
 do
