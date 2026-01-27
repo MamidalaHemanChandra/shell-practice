@@ -35,7 +35,7 @@ if [ ! -z $Log_files ];then
         while IFS=read -r file
         do
             echo "Log files are: $file"
-            rm -rf $Source_Dir
+            rm -rf $file
             echo "Deleted log files are: $file"
 
         done <<< $Source_Dir
