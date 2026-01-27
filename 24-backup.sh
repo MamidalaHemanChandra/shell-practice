@@ -46,13 +46,13 @@ Log_files=$( find $Source_Dir -name "*.log" -type f -mtime +$Days )
 if [ ! -z $Log_files ];then
     echo "Files found to Archieve: $Log_files"
     Timestamp=$(date +%F-%H-%M)
-    Zip_file_name="$Destination_Dir/app-logs:$Timestamp.zip"
+    Zip_file_name="$Destination_Dir/chandra:$Timestamp.zip"
     echo "ZIP file name is: $Zip_file_name"
     find $Source_Dir -name "*.log" -type f -mtime $Days | zip @ -j $Zip_file_name
 
     if [ -f $Zip_file_name ];then
         echo "Zip files found : $Zip_file_name"
-        while IFS=read -r file
+        while IFS= read -r file
         do
             echo "Log files are: $file"
             rm -rf $file
