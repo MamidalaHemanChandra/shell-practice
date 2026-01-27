@@ -28,7 +28,7 @@ Log_files=$( find $Source_dir -name "*.log" type -f -mtime +14 )
 while IFS= read -r file
 do
     echo "Log files are: $file"
-    rm -rf $Source_dir
+    rm -rf $file
     echo "Deleted log files are: $file "
 
 done <<< $Log_files
