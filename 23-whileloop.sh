@@ -10,7 +10,7 @@
 
 # done
 
-while IFS=read -r file
+while IFS= read -r file
 do
     echo "Lines in a file: $file"
 
