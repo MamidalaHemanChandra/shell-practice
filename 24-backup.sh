@@ -1,8 +1,26 @@
 #!/bin/bash
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 Source_Dir=$1
 Destination_Dir=$2
 Days=${3:-14}
+
+Logs_Folder="/var/log/shell-script"
+mkdir -p $Logs_Folder
+Script_Name=$(echo $0 | cut -d "." -f1)
+Logs="$Logs_Folder/$Script_Name.log"
+
+USERID=$(id -u)
+if [ $USERID -ne 0 ];then
+    echo -e "$R Error:: Take the Root Access $N" | tee -a $Logs
+    exit 1
+fi
+
+
 
 Usage() {
     echo "Error:: 24-backup.sh Source_Dir Destination_Dir Days [optioanl, default 14 days]"
