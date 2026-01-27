@@ -15,18 +15,20 @@ fi
 
 if [ ! -d  $Source_Dir ];then
     echo "Source Dir $Source_Dir doesn't exists"
+    exit 1
 fi
 
 if [ ! -d  $Destination_Dir ];then
     echo "Source Dir $Destination_Dir doesn't exists"
+    exit 1
 fi
 
-Log_files=$( find $Source_Dir -name "*.log" -type f -mtime $Days )
+Log_files=$( find $Source_Dir -name "*.log" -type f -mtime +$Days )
 
 if [ ! -z $Log_files ];then
     echo "Files found to Archieve: $Log_files"
     Timestamp=$(date +%F-%H-%M)
-    Zip_file_name="$Destination_Dir/app-logs:$Timestamp"
+    Zip_file_name="$Destination_Dir/app-logs:$Timestamp.zip"
     echo "ZIP file name is: $Zip_file_name"
     find $Source_Dir -name "*.log" -type f -mtime $Days | zip @ -j $Zip_file_name
 
@@ -45,5 +47,5 @@ if [ ! -z $Log_files ];then
     fi
 
 else
-    echo "No files found to Archieve"
+    echo "Already done Archieve"
 fi
