@@ -21,7 +21,7 @@ if [ ! -d  $Destination_Dir ];then
     echo "Source Dir $Destination_Dir doesn't exists"
 fi
 
-Log_files=$( find $Source_Dir -name "*.log" type -f -mtime $Days )
+Log_files=$( find $Source_Dir -name "*.log" -type f -mtime $Days )
 
 if [ ! -z $Log_files ];then
     echo "Files found to Archieve: $Log_files"
