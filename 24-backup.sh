@@ -48,7 +48,7 @@ if [ ! -z "$Log_files" ];then
     Timestamp=$(date +%F-%H-%M)
     Zip_file_name="$Destination_Dir/chandra:$Timestamp.zip"
     echo "ZIP file name is: $Zip_file_name"
-    find $Source_Dir -name "*.log" -type f -mtime $Days | zip @ -j $Zip_file_name
+    find $Source_Dir -name "*.log" -type f -mtime $Days | zip -@ -j $Zip_file_name
 
     if [ -f $Zip_file_name ];then
         echo "Zip files found : $Zip_file_name"
