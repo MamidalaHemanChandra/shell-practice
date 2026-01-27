@@ -58,7 +58,7 @@ if [ ! -z "$Log_files" ];then
             rm -r $file
             echo "Deleted log files are: $file"
 
-        done <<< $Source_Dir
+        done <<< $Zip_file_name
 
     else
         echo "Zip files not found"
