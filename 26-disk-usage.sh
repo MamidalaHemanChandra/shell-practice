@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Disk_Usage=$(df -hT | grep -v FileSystem)
-IP_Address=$(curl -s ifconfig.me)
+IP_Address=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 Threshold=2
 Message=""
 
